@@ -317,6 +317,7 @@ class Doppler_For_Learnpress_Admin {
 
 		if( $order->has_status( 'completed' ) && !$order->is_child() ){
 			$users = get_post_meta( $order_id, '_user_id', true);
+			$user_email = get_post_meta( $order_id, '_checkout_email', true);
 			if(!empty($users)){
 
 				//Subscribe to global buyers list.
@@ -338,6 +339,26 @@ class Doppler_For_Learnpress_Admin {
 					}
 				}
 			}
+			// added else for guests who didn't check the register checkbox, so that they get
+			// added to doppler list anyway.
+			else{
+				$lists = get_option('dplr_learnpress_subscribers_list');
+				$list_id = $lists['buyers'];
+				$this->subscribe_user_or_users($users, $list_id, $user_email);
+
+				$map = get_option('dplr_learnpress_courses_map');
+				if( !empty($map) ){
+					foreach($map as $mapped_course){
+						foreach($order_items as $k=>$order_item){
+							$course_id = $order_item['course_id'];
+							if($mapped_course['action_id'] == '1' && $mapped_course['course_id'] == $course_id){
+								//Subscribe user or users
+								$this->subscribe_user_or_users($users, $mapped_course['list_id'], $user_email);
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -346,16 +367,24 @@ class Doppler_For_Learnpress_Admin {
 	 * @param users | array or int
 	 * @param list_id | string
 	 */
-	private function subscribe_user_or_users($users,$list_id) {
+	private function subscribe_user_or_users($users, $list_id, $email = '') {
 		if(is_array($users)){
 			foreach($users as $k=>$user_id){
 				$user_email = get_userdata($user_id)->data->user_email;
 				$this->subscribe_customer( $list_id, $user_email, array() );
 			}
 		}else{
-			$user_id = $users;
-			$user_email = get_userdata($user_id)->data->user_email;
-			$this->subscribe_customer( $list_id, $user_email, array() );
+			// if $users == "0" is for guest users who did not tick the checkbox, meaning they did not choose to register
+			// but we need to have them on the Doppler List anyway.
+			if($users == "0"){
+				$user_email = $email;
+				$this->subscribe_customer( $list_id, $user_email, array() );
+			}
+			else{
+				$user_id = $users;
+				$user_email = get_userdata($user_id)->data->user_email;
+				$this->subscribe_customer( $list_id, $user_email, array() );
+			}
 		}
 	}
 

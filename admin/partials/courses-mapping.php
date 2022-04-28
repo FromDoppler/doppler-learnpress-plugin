@@ -10,9 +10,6 @@ $actions = array(   '1'=> __('Student subscribes to course', 'doppler-for-learnp
 <form id="course-mapping-form">
     <label><?php _e('Courses Mapping','doppler-for-learnpress') ?></label>
     <p>
-        Lorem ipsum
-    </p>
-    <p>
         <select id="map-course" class="ml-0">
             <option value=""><?php _e('Select course','doppler-for-learnpress')?></option>
             <?php

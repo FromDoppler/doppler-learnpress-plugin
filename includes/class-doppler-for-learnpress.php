@@ -86,7 +86,7 @@ class Doppler_For_Learnpress {
 		if ( defined( 'DOPPLER_FOR_LEARNPRESS_VERSION' ) ) {
 			$this->version = DOPPLER_FOR_LEARNPRESS_VERSION;
 		} else {
-			$this->version = '1.0.4';
+			$this->version = '1.0.7';
 		}
 		$this->plugin_name = 'doppler-for-learnpress';
 
@@ -141,7 +141,7 @@ class Doppler_For_Learnpress {
 		/**
 		 * The class responsible of handling connection with Doppler App
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-doppler-for-learnpress-app-connect.php';
+		// require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-doppler-for-learnpress-app-connect.php';
 		
 		/**
 		 * The class responsible of displaying admin notifications.
