@@ -3,7 +3,7 @@ Contributors: fromdoppler
 Donate link: www.fromdoppler.com
 Tags: email marketing
 Requires at least: 4.9
-Tested up to: 6.1.0
+Tested up to: 6.2
 Requires PHP: 5.6.4
 Stable tag: 1.0.8
 License: GPLv2 or later
