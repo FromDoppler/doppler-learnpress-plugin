@@ -577,14 +577,16 @@ class Doppler_For_Learnpress_Admin {
 	 * 
 	 */
 	public function show_admin_notice() {
-		$class = $this->admin_notice[0];
-		$text = $this->admin_notice[1];
-		if( !empty($class) && !empty($text) ){
-			?>
-				<div class="notice notice-<?php echo $class?> is-dismissible">
-					<p><?php echo $text ?></p>
-				</div>
-			<?php
+		if(isset($this->admin_notice[0]) && isset($this->admin_notice[1])) {
+			$class = $this->admin_notice[0];
+			$text = $this->admin_notice[1];
+			if( !empty($class) && !empty($text) ){
+				?>
+					<div class="notice notice-<?php echo $class?> is-dismissible">
+						<p><?php echo $text ?></p>
+					</div>
+				<?php
+			}
 		}
 	}
 
