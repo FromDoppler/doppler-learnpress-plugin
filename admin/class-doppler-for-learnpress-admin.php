@@ -618,7 +618,8 @@ class Doppler_For_Learnpress_Admin {
 	   //Register abadoned cart endpoint.
 	   register_rest_route( 'learnpress/v1', 'courses', array(
 		   'methods' => 'GET',
-		   'callback' => array($this, 'get_published_courses')
+		   'callback' => array($this, 'get_published_courses'),
+		   'permission_callback' => '__return_true'
 	   ));
    }
 
