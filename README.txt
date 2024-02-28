@@ -5,13 +5,15 @@ Tags: email marketing
 Requires at least: 4.9
 Tested up to: 6.4
 Requires PHP: 5.6.4
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Submit your LearnPress Students to a Doppler List.
 
 == Changelog ==
+= 1.0.9 =
+* Fix: Fix for some minor warnings.
 
 = 1.0.7 =
 * Feature: Now guest students that didn't decide to register (didn't tick the checkbox on checkout) are subscribed to Doppler lists anyway
