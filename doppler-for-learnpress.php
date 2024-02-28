@@ -10,7 +10,7 @@
  * Plugin Name:       Doppler for LearnPress
  * Plugin URI:        www.fromdoppler.com
  * Description:       Submit your LearnPress students to a Doppler Lists.
- * Version:           1.0.8
+ * Version:           1.0.9
  * Author:            Doppler
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
@@ -23,7 +23,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'DOPPLER_FOR_LEARNPRESS_VERSION', '1.0.8' );
+define( 'DOPPLER_FOR_LEARNPRESS_VERSION', '1.0.9' );
 define( 'DOPPLER_FOR_LEARNPRESS_PLUGIN_FILE', plugin_basename( __FILE__ ));
 define( 'DOPPLER_FOR_LEARNPRESS_URL', plugin_dir_url(__FILE__) );
 if(!defined('DOPPLER_PLUGINS_PATH')):
