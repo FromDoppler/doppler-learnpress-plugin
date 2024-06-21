@@ -1,11 +1,12 @@
 # Blank WordPress Pot
 # Copyright 2014 ...
 # This file is distributed under the GNU General Public License v3 or later.
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Blank WordPress Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2020-04-27 10:02-0300\n"
+"POT-Creation-Date: 2024-06-21 12:52-0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your Name <you@example.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -20,7 +21,7 @@ msgstr ""
 "esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
 "_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 1.7.5\n"
+"X-Generator: Poedit 3.4.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: admin/class-doppler-for-learnpress-admin.php:145
@@ -59,7 +60,7 @@ msgstr ""
 msgid "Doppler for LearnPress"
 msgstr ""
 
-#: admin/class-doppler-for-learnpress-admin.php:459
+#: admin/class-doppler-for-learnpress-admin.php:488
 msgid ""
 "Ouch! The selected List was deleted from Doppler. Please select another one."
 msgstr ""
@@ -68,35 +69,39 @@ msgstr ""
 msgid "Courses Mapping"
 msgstr ""
 
-#: admin/partials/courses-mapping.php:17
+#: admin/partials/courses-mapping.php:14
 msgid "Select course"
 msgstr ""
 
-#: admin/partials/courses-mapping.php:32
+#: admin/partials/courses-mapping.php:29
 msgid "Select List"
 msgstr ""
 
-#: admin/partials/courses-mapping.php:46
+#: admin/partials/courses-mapping.php:43
 msgid "Associate List"
 msgstr ""
 
-#: admin/partials/courses-mapping.php:53
+#: admin/partials/courses-mapping.php:50
 msgid "Course"
 msgstr ""
 
-#: admin/partials/courses-mapping.php:54
+#: admin/partials/courses-mapping.php:51
 msgid "Associated List"
 msgstr ""
 
-#: admin/partials/courses-mapping.php:67
+#: admin/partials/courses-mapping.php:64
 msgid "Warning: list is missing"
 msgstr ""
 
-#: admin/partials/courses-mapping.php:77
-msgid "Are you sure? "
+#: admin/partials/courses-mapping.php:65
+msgid "Delete"
 msgstr ""
 
-#: admin/partials/courses-mapping.php:78
+#: admin/partials/courses-mapping.php:74
+msgid "Are you sure?"
+msgstr ""
+
+#: admin/partials/courses-mapping.php:75
 msgid ""
 "If you proceed, the Course will no longer send subscriptors to the List."
 msgstr ""
@@ -158,18 +163,8 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: doppler-for-learnpress.php:48
-msgid "This plugin requires "
-msgstr ""
-
-#: doppler-for-learnpress.php:48
-msgid " plugin to be active."
-msgstr ""
-
-#: includes/class-doppler-for-learnpress-deactivator.php:60
-msgid "Please delete associated campaings in Doppler before deactivating."
-msgstr ""
-
-#: includes/class-doppler-for-learnpress-deactivator.php:63
-msgid "<strong>Doppler For Learnpress wasn't deactivated.</strong>"
+#: includes/class-dependency-checker.php:37
+msgid ""
+"Ouch! Doppler for LearnPress will not work if the following plugins are not "
+"installed and active:"
 msgstr ""

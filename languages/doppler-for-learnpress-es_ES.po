@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blank WordPress Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2020-04-27 10:02-0300\n"
+"POT-Creation-Date: 2024-06-21 12:36-0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
 "_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 1.7.5\n"
+"X-Generator: Poedit 3.4.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: admin/class-doppler-for-learnpress-admin.php:145
@@ -59,8 +59,8 @@ msgid ""
 "php\">upgrade</a> Doppler Forms."
 msgstr ""
 "Ouch! <strong>Doppler para LearnPress</strong> requiere tener activa al "
-"menos la versión de <strong>Doppler Forms v%s</strong>. Por favor <a href="
-"\"%splugins.php\">actualiza</a> Doppler Forms."
+"menos la versión de <strong>Doppler Forms v%s</strong>. Por favor <a "
+"href=\"%splugins.php\">actualiza</a> Doppler Forms."
 
 #: admin/class-doppler-for-learnpress-admin.php:207
 #: admin/class-doppler-for-learnpress-admin.php:208
@@ -68,7 +68,7 @@ msgstr ""
 msgid "Doppler for LearnPress"
 msgstr "Doppler para LearnPress"
 
-#: admin/class-doppler-for-learnpress-admin.php:459
+#: admin/class-doppler-for-learnpress-admin.php:488
 msgid ""
 "Ouch! The selected List was deleted from Doppler. Please select another one."
 msgstr ""
@@ -79,35 +79,39 @@ msgstr ""
 msgid "Courses Mapping"
 msgstr "Mapeo de Cursos"
 
-#: admin/partials/courses-mapping.php:17
+#: admin/partials/courses-mapping.php:14
 msgid "Select course"
 msgstr "Selecciona Curso"
 
-#: admin/partials/courses-mapping.php:32
+#: admin/partials/courses-mapping.php:29
 msgid "Select List"
 msgstr "Selecciona Lista"
 
-#: admin/partials/courses-mapping.php:46
+#: admin/partials/courses-mapping.php:43
 msgid "Associate List"
 msgstr "Asociar Lista"
 
-#: admin/partials/courses-mapping.php:53
+#: admin/partials/courses-mapping.php:50
 msgid "Course"
 msgstr "Curso"
 
-#: admin/partials/courses-mapping.php:54
+#: admin/partials/courses-mapping.php:51
 msgid "Associated List"
 msgstr "Lista asociada"
 
-#: admin/partials/courses-mapping.php:67
+#: admin/partials/courses-mapping.php:64
 msgid "Warning: list is missing"
 msgstr "Atención: la lista no existe"
 
-#: admin/partials/courses-mapping.php:77
-msgid "Are you sure? "
+#: admin/partials/courses-mapping.php:65
+msgid "Delete"
+msgstr "Eliminar"
+
+#: admin/partials/courses-mapping.php:74
+msgid "Are you sure?"
 msgstr "¿Está seguro?"
 
-#: admin/partials/courses-mapping.php:78
+#: admin/partials/courses-mapping.php:75
 msgid ""
 "If you proceed, the Course will no longer send subscriptors to the List."
 msgstr ""
@@ -179,48 +183,16 @@ msgstr "Sincronizar"
 msgid "Settings"
 msgstr "Configuración"
 
-#: doppler-for-learnpress.php:48
-msgid "This plugin requires "
-msgstr "Este plugin requiere que "
+#: includes/class-dependency-checker.php:37
+msgid ""
+"Ouch! Doppler for LearnPress will not work if the following plugins are not "
+"installed and active:"
+msgstr ""
+"¡Ouch! Doppler para LearnPress no funcionará si los siguientes plugins no "
+"están instalados y activos:"
 
-#: doppler-for-learnpress.php:48
-msgid " plugin to be active."
-msgstr " esté activo."
+#~ msgid "Please delete associated campaings in Doppler before deactivating."
+#~ msgstr "Por favor elmine las campañas asociadas antes de desactivar."
 
-#: includes/class-doppler-for-learnpress-deactivator.php:60
-msgid "Please delete associated campaings in Doppler before deactivating."
-msgstr "Por favor elmine las campañas asociadas antes de desactivar."
-
-#: includes/class-doppler-for-learnpress-deactivator.php:63
-msgid "<strong>Doppler For Learnpress wasn't deactivated.</strong>"
-msgstr "Doppler para Learnpress no fué desactivado."
-
-#~ msgid "Select the list you want to populate."
-#~ msgstr ""
-#~ "Selecciona la lista a la cual quieres enviar a tus estudiantes inscriptos."
-
-#~ msgid "Type"
-#~ msgstr "Tipo"
-
-#~ msgid "List Name"
-#~ msgstr "Nombre de la Lista"
-
-#~ msgid "Subscriptors"
-#~ msgstr "Suscriptores"
-
-#~ msgid "Enrolled students"
-#~ msgstr "Estudiantes inscriptos"
-
-#~ msgid "Save"
-#~ msgstr "Guardar"
-
-#~ msgid "Synchronize"
-#~ msgstr "Sincronizar"
-
-#~ msgid "Synchronizing"
-#~ msgstr "Sincronizando"
-
-#~ msgid "<b>Doppler Forms:</b> Connection error. Please contact support."
-#~ msgstr ""
-#~ "<b>Formularios de Doppler:</b> Error de conexión. Por favor contacte a "
-#~ "soporte."
+#~ msgid "<strong>Doppler For Learnpress wasn't deactivated.</strong>"
+#~ msgstr "<strong>Doppler para Learnpress no fué desactivado.</strong>"

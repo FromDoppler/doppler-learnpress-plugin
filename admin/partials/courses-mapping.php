@@ -71,6 +71,6 @@ $actions = array(   '1'=> __('Student subscribes to course', 'doppler-for-learnp
     </tbody>
 </table>
 
-<div id="dplr-lp-dialog-confirm" title="<?php _e('Are you sure? ', 'doppler-for-learnpress'); ?>">
+<div id="dplr-lp-dialog-confirm" title="<?php _e('Are you sure?', 'doppler-for-learnpress'); ?>">
     <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span> <?php _e('If you proceed, the Course will no longer send subscriptors to the List.', 'doppler-for-learnpress')?></p>
 </div>
