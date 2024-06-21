@@ -34,7 +34,7 @@ class Dependecy_Checker
         if(count($this->inactive_plugins)===0) return;
         add_action( 'admin_notices', function() {
             $class = 'notice notice-error';
-            $message = __( 'Ouch! Doppler for LearPress will not work if the following plugins are not installed and active:', 'doppler-for-learnpress' );
+            $message = __( 'Ouch! Doppler for LearnPress will not work if the following plugins are not installed and active:', 'doppler-for-learnpress' );
             $missing_plugins = array();
             foreach($this->inactive_plugins as $key=>$plugin){
                 array_push($missing_plugins,sprintf(' <a href="%s" target="_blank">%s</a>', $plugin['repository'], $plugin['name']));
