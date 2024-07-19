@@ -59,16 +59,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
             </select>
         </p>
 
-        <p class="d-flex justify-end">
-
-            <button id="dplr-lp-clear" class="dp-button button-medium primary-grey" <?php echo empty($subscribers_lists['buyers'])? 'disabled' : '' ?>>
-                <?php _e('Clear selection', 'doppler-for-learnpress') ?>
-            </button>
-        
-            <button id="dplr-lp-lists-btn" class="dp-button button-medium primary-green ml-1">
+        <p class="d-flex justify-start">
+            <button id="dplr-lp-lists-btn" class="dp-button button-medium primary-green">
                 <?php _e('Sync', 'doppler-for-learnpress') ?>
             </button>
-
+            <button id="dplr-lp-clear" class="dp-button button-medium primary-grey ml-1" <?php echo empty($subscribers_lists['buyers'])? 'disabled' : '' ?>>
+                <?php _e('Clear selection', 'doppler-for-learnpress') ?>
+            </button>
         </p>
 
     </form>
