@@ -43,7 +43,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
     
     $lists = $this->get_alpha_lists();
     $subscribers_lists = get_option('dplr_learnpress_subscribers_list');
-    $this->check_active_list($subscribers_lists ? $subscribers_lists['buyers'] : '',$lists);
+    $this->check_active_list($subscribers_lists && isset($subscribers_lists['buyers']) 
+        ? $subscribers_lists['buyers'] 
+        : '',$lists);
 
     require_once('settings.php');
 
