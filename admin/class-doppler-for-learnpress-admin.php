@@ -141,6 +141,8 @@ class Doppler_For_Learnpress_Admin {
 	public function enqueue_scripts() {
 		wp_enqueue_script( 'jquery-ui-dialog' );
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/doppler-for-learnpress-admin.js', array( 'jquery', 'jquery-ui-dialog', 'Doppler'), $this->version, false );
+		wp_enqueue_script('doppler-loader', 'https://cdn.fromdoppler.com/mfe-loader/loader-v2.0.0.js', array($this->plugin_name), $this->version, false);
+		wp_enqueue_script('doppler-styles', plugin_dir_url( __FILE__ ) . 'js/doppler-styles.js', array($this->plugin_name, 'doppler-loader'), $this->version, false);
 		wp_localize_script( $this->plugin_name, 'dplrlp_object_string', array( 
 			'Syncrhonizing'   	=> __( 'We\'re synchronizing your Subscribers with your Doppler List.', 'doppler-for-learnpress' ),	
 			'newListSuccess'    => __( 'The List has been created correctly.', 'doppler-for-learnpress'),
