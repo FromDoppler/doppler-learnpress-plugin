@@ -5,7 +5,6 @@ $courses_map = get_option('dplr_learnpress_courses_map');
 $actions = array(   '1'=> __('Student subscribes to course', 'doppler-for-learnpress'),
                     '2'=>  __('Student finishes course', 'doppler-for-learnpress'));*/
 ?>
-<hr>
 
 <form id="course-mapping-form" class="m-t-18">
     <label><?php _e('Courses Mapping','doppler-for-learnpress') ?></label>
