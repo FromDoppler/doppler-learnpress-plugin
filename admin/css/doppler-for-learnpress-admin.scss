@@ -3,41 +3,24 @@
 *
 */
 
-.dplr_settings .dplr-tab-content.dplr-learnpress-tab{
-  
-    .col-68{
-      width: 68%;
-    }
+.dplr_settings .dplr-tab-content.dplr-learnpress-tab {
+	.col-68 {
+		width: 68%;
+	}
 
-    .mt10{
-      margin-top: 10px;
-    }
+	.mt10 {
+		margin-top: 10px;
+	}
 
-    #dplr-lp-form-list, #course-mapping-form{
-      max-width: 780px;
-    }
-    
-    #dplr-form-list-new input[type="text"]{
-        width:200px;
-    }
-    
-    #course-mapping-form select{
-        width: 160px;
-        margin-left: 5px;
-        &:first-child{
-          margin-left:0;
-        }
-    }
-    
-    #associated-lists-tbl{
-      max-width: 900px;
-      .tool-col{
-        width: 25%;
-      }
-    }
-    
-    .pl-0{
-      padding-left: 0px;
-    }
+	#dplr-form-list-new input[type="text"] {
+		width: 200px;
+	}
 
+	select {
+		background: white;
+	}
+
+	.pl-0 {
+		padding-left: 0px;
+	}
 }
