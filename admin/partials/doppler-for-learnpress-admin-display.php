@@ -35,7 +35,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
             <?php
             $active_tab = 'settings';
-            include 'tabs-nav.php';
             
             if( isset($_POST['dplr_learnpress_subscribers_list']) && $this->validate_subscribers_list($_POST['dplr_learnpress_subscribers_list']) && current_user_can('manage_options') && check_admin_referer('map-lists') ){
                 update_option( 'dplr_learnpress_subscribers_list', $this->sanitize_subscribers_list($_POST['dplr_learnpress_subscribers_list']) );
