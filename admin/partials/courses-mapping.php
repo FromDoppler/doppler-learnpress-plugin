@@ -74,7 +74,7 @@ $actions = array(   '1'=> __('Student subscribes to course', 'doppler-for-learnp
                 <th aria-label="List name" scope="col">
                 <span><?php _e('Associated List', 'doppler-for-learnpress')?></span>
                 </th>
-                <th aria-label="Actions" scope="col">
+                <th aria-label="Actions" scope="col" style="width: 25px;">
                 <span><?php _e('Actions', 'doppler-form')?></span>
                 </th>
             </tr>
