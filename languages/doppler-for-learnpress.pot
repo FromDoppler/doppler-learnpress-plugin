@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blank WordPress Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2024-06-21 12:52-0300\n"
+"POT-Creation-Date: 2024-10-02 08:33-0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your Name <you@example.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -21,32 +21,32 @@ msgstr ""
 "esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
 "_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.5\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: admin/class-doppler-for-learnpress-admin.php:145
+#: admin/class-doppler-for-learnpress-admin.php:157
 msgid "We're synchronizing your Subscribers with your Doppler List."
 msgstr ""
 
-#: admin/class-doppler-for-learnpress-admin.php:146
+#: admin/class-doppler-for-learnpress-admin.php:158
 msgid "The List has been created correctly."
 msgstr ""
 
-#: admin/class-doppler-for-learnpress-admin.php:147
+#: admin/class-doppler-for-learnpress-admin.php:159
 msgid ""
 "Select the Doppler List where you want to import Subscribers of your course. "
 "When synchronized, those customers already registered and future customers "
 "will be sent automatically."
 msgstr ""
 
-#: admin/class-doppler-for-learnpress-admin.php:153
+#: admin/class-doppler-for-learnpress-admin.php:165
 msgid ""
 "Ouch! <strong>Doppler for LearnPress</strong> requires the <a href=\"https://"
 "wordpress.org/plugins/doppler-form/\">Doppler Forms</a> plugin to be "
 "installed and active."
 msgstr ""
 
-#: admin/class-doppler-for-learnpress-admin.php:156
+#: admin/class-doppler-for-learnpress-admin.php:168
 #, php-format
 msgid ""
 "Ouch! <strong>Doppler for LearnPress</strong> requires at least "
@@ -54,13 +54,13 @@ msgid ""
 "php\">upgrade</a> Doppler Forms."
 msgstr ""
 
-#: admin/class-doppler-for-learnpress-admin.php:207
-#: admin/class-doppler-for-learnpress-admin.php:208
-#: admin/partials/doppler-for-learnpress-admin-display.php:31
+#: admin/class-doppler-for-learnpress-admin.php:219
+#: admin/class-doppler-for-learnpress-admin.php:220
+#: admin/partials/doppler-for-learnpress-admin-display.php:32
 msgid "Doppler for LearnPress"
 msgstr ""
 
-#: admin/class-doppler-for-learnpress-admin.php:488
+#: admin/class-doppler-for-learnpress-admin.php:500
 msgid ""
 "Ouch! The selected List was deleted from Doppler. Please select another one."
 msgstr ""
@@ -69,44 +69,48 @@ msgstr ""
 msgid "Courses Mapping"
 msgstr ""
 
-#: admin/partials/courses-mapping.php:14
+#: admin/partials/courses-mapping.php:20
 msgid "Select course"
 msgstr ""
 
-#: admin/partials/courses-mapping.php:29
+#: admin/partials/courses-mapping.php:41
 msgid "Select List"
 msgstr ""
 
-#: admin/partials/courses-mapping.php:43
+#: admin/partials/courses-mapping.php:58
 msgid "Associate List"
 msgstr ""
 
-#: admin/partials/courses-mapping.php:50
+#: admin/partials/courses-mapping.php:72
 msgid "Course"
 msgstr ""
 
-#: admin/partials/courses-mapping.php:51
+#: admin/partials/courses-mapping.php:75
 msgid "Associated List"
 msgstr ""
 
-#: admin/partials/courses-mapping.php:64
+#: admin/partials/courses-mapping.php:78
+msgid "Actions"
+msgstr ""
+
+#: admin/partials/courses-mapping.php:90
 msgid "Warning: list is missing"
 msgstr ""
 
-#: admin/partials/courses-mapping.php:65
+#: admin/partials/courses-mapping.php:98
 msgid "Delete"
 msgstr ""
 
-#: admin/partials/courses-mapping.php:74
+#: admin/partials/courses-mapping.php:111
 msgid "Are you sure?"
 msgstr ""
 
-#: admin/partials/courses-mapping.php:75
+#: admin/partials/courses-mapping.php:112
 msgid ""
 "If you proceed, the Course will no longer send subscriptors to the List."
 msgstr ""
 
-#: admin/partials/doppler-for-learnpress-admin-display.php:30
+#: admin/partials/doppler-for-learnpress-admin-display.php:31
 msgid ""
 "https://www.fromdoppler.com/en/?"
 "utm_source=landing&utm_medium=integracion&utm_campaign=wordpress"
@@ -116,46 +120,42 @@ msgstr ""
 msgid "Your List has been syncronized and saved succesfully."
 msgstr ""
 
-#: admin/partials/settings.php:25
+#: admin/partials/settings.php:23
+msgid "List Synchronization"
+msgstr ""
+
+#: admin/partials/settings.php:28
 msgid ""
 "As they enroll in a course, your Subscribers will be automatically sent to "
 "the selected Doppler List."
 msgstr ""
 
-#: admin/partials/settings.php:28
+#: admin/partials/settings.php:31
 msgid ""
 "You currently have no Doppler Lists created. Create a List in Doppler by "
 "entering a List name and pressing Create List."
 msgstr ""
 
-#: admin/partials/settings.php:31
+#: admin/partials/settings.php:33
 msgid ""
 "Select the Doppler List where you want to import Subscribers of your "
 "courses. When synchronized, those customers already registered and future "
 "customers will be sent automatically."
 msgstr ""
 
-#: admin/partials/settings.php:40
-msgid "Write the List name"
-msgstr ""
-
-#: admin/partials/settings.php:43
-msgid "Create List"
-msgstr ""
-
-#: admin/partials/settings.php:55
+#: admin/partials/settings.php:47
 msgid "Doppler List to send Subscribers"
 msgstr ""
 
-#: admin/partials/settings.php:57
+#: admin/partials/settings.php:52
 msgid "Select"
 msgstr ""
 
-#: admin/partials/settings.php:77
+#: admin/partials/settings.php:72
 msgid "Clear selection"
 msgstr ""
 
-#: admin/partials/settings.php:81
+#: admin/partials/settings.php:75
 msgid "Sync"
 msgstr ""
 

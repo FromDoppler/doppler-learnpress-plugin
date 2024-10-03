@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  ?>
 <div class="dp-library">
     <div class="dp-container">
-        <div class="wrap dplr_settings">
+        <div class="dplr_settings">
 
             <a href="<?php _e('https://www.fromdoppler.com/en/?utm_source=landing&utm_medium=integracion&utm_campaign=wordpress', 'doppler-for-learnpress')?>" target="_blank" class="dplr-logo-header"><img src="<?php echo DOPPLER_FOR_LEARNPRESS_URL?>admin/img/logo-doppler.svg" alt="Doppler logo"/></a>
             <h2 class="main-title"><?php _e('Doppler for LearnPress', 'doppler-for-learnpress')?> <?php echo $this->get_version()?></h2> 
