@@ -20,15 +20,15 @@ $actions = array(   '1'=> __('Student subscribes to course', 'doppler-for-learnp
                                 <?php _e('Select course','doppler-for-learnpress')?>
                             </option>
                             <?php
-                                if(!empty($lists)){
-                                    foreach($lists as $k=>$v):
+                                if(!empty($courses)){
+                                    foreach($courses as $course):
                                     ?>
-                                        <option value="<?php echo esc_attr($k)?>">
-                                            <?php echo esc_html($v['name'])?>
+                                        <option value="<?php echo $course->ID?>">
+                                            <?php echo $course->post_title?>
                                         </option>
                                     <?php
                                     endforeach;
-                                } 
+                                }
                             ?>
                         </select>
                     </div>
@@ -41,11 +41,11 @@ $actions = array(   '1'=> __('Student subscribes to course', 'doppler-for-learnp
                                 <?php _e('Select List','doppler-for-learnpress')?>
                             </option>
                             <?php
-                                if(!empty($courses)){
-                                    foreach($courses as $course):
+                                if(!empty($lists)){
+                                    foreach($lists as $k=>$v):
                                     ?>
-                                        <option value="<?php echo $course->ID?>">
-                                            <?php echo $course->post_title?>
+                                        <option value="<?php echo esc_attr($k)?>">
+                                            <?php echo esc_html($v['name'])?>
                                         </option>
                                     <?php
                                     endforeach;
