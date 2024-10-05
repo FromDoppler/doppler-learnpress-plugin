@@ -89,17 +89,18 @@ $actions = array(   '1'=> __('Student subscribes to course', 'doppler-for-learnp
                                 <td><?php echo $course_post->post_title ?></td>
                                 <td><?php echo isset($lists[$list_id])?$lists[$list_id]['name']:__('Warning: list is missing', 'doppler-for-learnpress')?></td>
                                 <td>
-                                <div class="dp-icons-group">
-                                    <a data-assoc="<?php echo $value['course_id']?>-1"
-                                        class="dplr-remove">
-                                        <div class="dp-tooltip-container">
-                                        <span class="ms-icon icon-delete"></span>
-                                        <div class="dp-tooltip-top">
-                                            <span><?php _e('Delete', 'doppler-form')?></span>
-                                        </div>
-                                        </div>
-                                    </a>
-                                </div>
+                                    <div class="dp-icons-group">
+                                        <a data-assoc="<?php echo $value['course_id']?>-1"
+                                            class="dplr-remove">
+                                            <div class="dp-tooltip-container">
+                                            <span class="ms-icon icon-delete"></span>
+                                            <div class="dp-tooltip-top">
+                                                <span><?php _e('Delete', 'doppler-form')?></span>
+                                            </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
                             </tr>
                         <?php
                     endforeach;
