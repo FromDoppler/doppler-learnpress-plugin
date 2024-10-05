@@ -154,9 +154,10 @@ class Doppler_For_Learnpress_Admin {
 		wp_enqueue_script('doppler-loader', 'https://cdn.fromdoppler.com/mfe-loader/loader-v2.0.0.js', array($this->plugin_name), $this->version, false);
 		wp_enqueue_script('doppler-styles', plugin_dir_url( __FILE__ ) . 'js/doppler-styles.js', array($this->plugin_name, 'doppler-loader'), $this->version, false);
 		wp_localize_script( $this->plugin_name, 'dplrlp_object_string', array( 
-			'Syncrhonizing'   	=> __( 'We\'re synchronizing your Subscribers with your Doppler List.', 'doppler-for-learnpress' ),	
+			'Syncrhonizing'   	=> __( 'We\'re synchronizing your Subscribers with your Doppler List.', 'doppler-for-learnpress' ),
 			'newListSuccess'    => __( 'The List has been created correctly.', 'doppler-for-learnpress'),
-			'selectAList'		=> __( 'Select the Doppler List where you want to import Subscribers of your course. When synchronized, those customers already registered and future customers will be sent automatically.', 'doppler-for-learnpress')							 				
+			'selectAList'		=> __( 'Select the Doppler List where you want to import Subscribers of your course. When synchronized, those customers already registered and future customers will be sent automatically.', 'doppler-for-learnpress'),
+			'DeleteAction'		=> __('Delete', 'doppler-form')
 		) ); 
 	}
 	
@@ -519,7 +520,7 @@ class Doppler_For_Learnpress_Admin {
 		
 		//avoid repeated course/action association.
 		if($assoc_exists){
-			wp_send_json_error(array('error'=>0,'message'=>'Duplicated association'));
+			wp_send_json_error(array('error'=>0,'message'=> __('Course already associated', 'doppler-for-learnpress')));
 		}
 
 		//TODO: action_id is always 1 atm. 
