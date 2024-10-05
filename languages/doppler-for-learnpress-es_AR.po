@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blank WordPress Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2024-10-02 08:33-0300\n"
+"POT-Creation-Date: 2024-10-05 12:19-0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -74,6 +74,10 @@ msgid ""
 msgstr ""
 "¡Ouch! La Lista seleccionada fue eliminada en Doppler. Por favor selecciona "
 "otra."
+
+#: admin/class-doppler-for-learnpress-admin.php:522
+msgid "Course already associated"
+msgstr "Curso ya asociado"
 
 #: admin/partials/courses-mapping.php:11
 msgid "Courses Mapping"

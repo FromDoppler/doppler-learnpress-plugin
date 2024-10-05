@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Blank WordPress Pot v1.0.0\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2024-10-02 08:33-0300\n"
+"POT-Creation-Date: 2024-10-05 12:20-0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Your Name <you@example.com>\n"
 "Language-Team: Your Team <translations@example.com>\n"
@@ -63,6 +63,10 @@ msgstr ""
 #: admin/class-doppler-for-learnpress-admin.php:500
 msgid ""
 "Ouch! The selected List was deleted from Doppler. Please select another one."
+msgstr ""
+
+#: admin/class-doppler-for-learnpress-admin.php:522
+msgid "Course already associated"
 msgstr ""
 
 #: admin/partials/courses-mapping.php:11
