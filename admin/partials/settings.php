@@ -5,16 +5,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 ?>
 
 <div>
-    <?php $this->display_success_message() ?>
-
-    <?php $this->display_error_message() ?>
-
-    <div id="showSuccessResponse" class="messages-container info d-none">
-    </div>
-
-    <div id="showErrorResponse" class="messages-container blocker d-none">
-    </div>
-
     <div class="dp-rowflex">
         <header class="hero-banner">
             <div class="dp-container">
@@ -40,6 +30,15 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
                 <span class="arrow"></span>
             </div>
         </header>
+        <?php $this->display_success_message() ?>
+
+        <?php $this->display_error_message() ?>
+
+        <div id="showSuccessResponse" class="messages-container info d-none">
+        </div>
+
+        <div id="showErrorResponse" class="messages-container blocker d-none">
+        </div>
         <div class="col-sm-12 col-md-12 col-lg-12 panel dp-box-shadow p-b-12">
             <form id="dplr-lp-form-list" action="" method="post">
                 <?php wp_nonce_field( 'map-lists' );?>
