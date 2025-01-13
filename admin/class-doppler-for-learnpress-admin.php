@@ -258,9 +258,18 @@ class Doppler_For_Learnpress_Admin {
 	
 		if( !empty($map) ){
 			foreach($map as $mapped_course){
-					$course_id = $mapped_course['course_id'];
-					$students = $this->get_students_from_course ($course_id);
-					$result = $subscriber_resource->importSubscribers( $mapped_course['list_id'], $this->get_subscribers_for_import($students) )['body'];
+				$course_id = $mapped_course['course_id'];
+				$students = $this->get_students_from_course ($course_id);
+				$subscribers = $this->get_subscribers_for_import($students);
+				$result = $subscriber_resource->importSubscribers( $mapped_course['list_id'], $subscribers )['body'];
+
+				$dplr_courses_map = array(
+					'course_id'=>$course_id,
+					'action_id'=>$mapped_course['action_id'],
+					'list_id'=>$mapped_course['list_id'],
+					'count'=> count($subscribers['items'])
+				);
+				update_option('dplr_learnpress_courses_map', $dplr_courses_map);
 			}
 		}
 		
@@ -337,15 +346,20 @@ class Doppler_For_Learnpress_Admin {
 				//Check if course is mapped for registering subscriptions and subscribe.
 				$map = get_option('dplr_learnpress_courses_map');
 				if( !empty($map) ){
-					foreach($map as $mapped_course){
+					foreach($map as $index => $mapped_course){
 						foreach($order_items as $k=>$order_item){
 							$course_id = $order_item['course_id'];
 							if($mapped_course['action_id'] == '1' && $mapped_course['course_id'] == $course_id){
 								//Subscribe user or users
 								$this->subscribe_user_or_users($users, $mapped_course['list_id']);
+			
+								//update counter
+								$mapped_course['count'] += 1;
+								$map[$index] = $mapped_course;
 							}
 						}
 					}
+					update_option('dplr_learnpress_courses_map', $map);
 				}
 			}
 			// added else for guests who didn't check the register checkbox, so that they get
@@ -357,15 +371,20 @@ class Doppler_For_Learnpress_Admin {
 
 				$map = get_option('dplr_learnpress_courses_map');
 				if( !empty($map) ){
-					foreach($map as $mapped_course){
+					foreach($map as $index => $mapped_course){
 						foreach($order_items as $k=>$order_item){
 							$course_id = $order_item['course_id'];
 							if($mapped_course['action_id'] == '1' && $mapped_course['course_id'] == $course_id){
 								//Subscribe user or users
 								$this->subscribe_user_or_users($users, $mapped_course['list_id'], $user_email);
+
+								//update counter
+								$mapped_course['count'] += 1;
+								$map[$index] = $mapped_course;
 							}
 						}
 					}
+					update_option('dplr_learnpress_courses_map', $map);
 				}
 			}
 		}
@@ -519,21 +538,21 @@ class Doppler_For_Learnpress_Admin {
 			wp_send_json_error(array('error'=>0,'message'=> __('Course already associated', 'doppler-for-learnpress')));
 		}
 
-		//TODO: action_id is always 1 atm. 
-		//a course plus an action have an associated list
-		//$dplr_courses_map[][$_POST['course_id']][$_POST['action_id']] = $_POST['list_id'];
+		$students = $this->get_students_from_course ($_POST['course_id']);
+		$subscriber_resource = $this->doppler_service->getResource('subscribers');
+		$subscribers = $this->get_subscribers_for_import($students);
+		$result = $subscriber_resource->importSubscribers( $_POST['list_id'], $subscribers )['body'];
+		
 		$dplr_courses_map[] = array(
-							'course_id'=>$_POST['course_id'],
-							'action_id'=>$_POST['action_id'],
-							'list_id'=>$_POST['list_id']
-						);
-		if(update_option( 'dplr_learnpress_courses_map', $dplr_courses_map )){
-			//Map, then synch!
-			$students = $this->get_students_from_course ($_POST['course_id']);
-			$subscriber_resource = $this->doppler_service->getResource('subscribers');
-			$result = $subscriber_resource->importSubscribers( $_POST['list_id'], $this->get_subscribers_for_import($students) )['body'];
-			wp_send_json_success();
-		}
+			'course_id'=>$_POST['course_id'],
+			'action_id'=>$_POST['action_id'],
+			'list_id'=>$_POST['list_id'],
+			'count'=>count($subscribers['items'])
+		);
+		update_option('dplr_learnpress_courses_map', $dplr_courses_map);
+
+		wp_send_json_success();
+
 		wp_die();
 	}
 	/**
