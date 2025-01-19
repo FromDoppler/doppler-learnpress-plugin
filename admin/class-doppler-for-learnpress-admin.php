@@ -291,28 +291,6 @@ class Doppler_For_Learnpress_Admin {
 	}
 
 	/**
-	 * Subscribe customer to list after 
-	 * course subscription from fromt-end
-	 * 
-	 * @since 1.0.0
-	 */
-	/*
-	public function dplr_after_customer_subscription( $order_id ) {
-		echo 'dplr_after_customer_subscription';
-		die();
-		$order = new LP_Order( $order_id );
-		$lists = get_option('dplr_learnpress_subscribers_list');
-		if(!empty($lists)){
-			$list_id = $lists['buyers'];
-			$order = new LP_Order( $order_id );
-			$user_data = get_userdata($order->user_id);
-			$user_email = $user_data->data->user_email;
-			$this->set_credentials(); 
-			$this->subscribe_customer( $list_id, $user_email, array() );
-		}
-	}*/
-
-	/**
 	 * Subscribe customer/s to list after 
 	 * course subscription from backend-end or backend.
 	 * 
