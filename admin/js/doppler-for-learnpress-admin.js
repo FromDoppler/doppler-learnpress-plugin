@@ -36,7 +36,14 @@
 			$("#dplr-settings-text").html(dplrlp_object_string.Syncrhonizing);
 			synchBuyers(buyersList).then(function (response) {
 				var obj = JSON.parse(response);
-				if (obj.createdResourceId || obj.errCode == "NoStudentsFound") {
+				if (JSON.parse(obj.apiResponse).createdResourceId || obj.errCode == "NoStudentsFound") {
+					$('<input>').attr({
+						type: 'hidden',
+						id: 'counter',
+						name: 'dplr_learnpress_subscribers_list[count]',
+						value: obj.studentsCount
+					}).appendTo('#dplr-lp-form-list');
+
 					$("#dplr-lp-form-list").submit();
 				} else {
 					if (obj.error != 1) {

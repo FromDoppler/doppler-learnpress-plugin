@@ -247,6 +247,7 @@ class Doppler_For_Learnpress_Admin {
 			echo json_encode(array('error'=>'1', 'errCode'=>'NoStudentsFound'));
 			wp_die();
 		}
+		$studentsAmount = is_array($students) ? count($students) : 0;
 		$subscriber_resource = $this->doppler_service->getResource( 'subscribers' );
 		$this->set_origin();
 		$result = $subscriber_resource->importSubscribers( $list_id, $this->get_subscribers_for_import($students) )['body'];
@@ -263,8 +264,8 @@ class Doppler_For_Learnpress_Admin {
 					$result = $subscriber_resource->importSubscribers( $mapped_course['list_id'], $this->get_subscribers_for_import($students) )['body'];
 			}
 		}
-		
-		echo $result;
+
+		echo json_encode(array('apiResponse' => $result, 'studentsCount' => $studentsAmount));
 		wp_die();
 	}
 
