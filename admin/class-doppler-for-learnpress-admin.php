@@ -258,18 +258,9 @@ class Doppler_For_Learnpress_Admin {
 	
 		if( !empty($map) ){
 			foreach($map as $mapped_course){
-				$course_id = $mapped_course['course_id'];
-				$students = $this->get_students_from_course ($course_id);
-				$subscribers = $this->get_subscribers_for_import($students);
-				$result = $subscriber_resource->importSubscribers( $mapped_course['list_id'], $subscribers )['body'];
-
-				$dplr_courses_map = array(
-					'course_id'=>$course_id,
-					'action_id'=>$mapped_course['action_id'],
-					'list_id'=>$mapped_course['list_id'],
-					'count'=> count($subscribers['items'])
-				);
-				update_option('dplr_learnpress_courses_map', $dplr_courses_map);
+					$course_id = $mapped_course['course_id'];
+					$students = $this->get_students_from_course ($course_id);
+					$result = $subscriber_resource->importSubscribers( $mapped_course['list_id'], $this->get_subscribers_for_import($students) )['body'];
 			}
 		}
 		
