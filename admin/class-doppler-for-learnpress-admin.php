@@ -310,8 +310,12 @@ class Doppler_For_Learnpress_Admin {
 
 				//Subscribe to global buyers list.
 				$lists = get_option('dplr_learnpress_subscribers_list');
-				$list_id = $lists['buyers'];
-				$this->subscribe_user_or_users($users, $list_id);
+				if (is_array($lists)) {
+					$list_id = $lists['buyers'];
+					$this->subscribe_user_or_users($users, $list_id);
+					$lists['count'] = intval($lists['count']) + (is_array($users) ? count($users) : 1);
+					update_option('dplr_learnpress_subscribers_list', $lists);
+				}
 				
 				//Check if course is mapped for registering subscriptions and subscribe.
 				$map = get_option('dplr_learnpress_courses_map');
@@ -324,7 +328,7 @@ class Doppler_For_Learnpress_Admin {
 								$this->subscribe_user_or_users($users, $mapped_course['list_id']);
 			
 								//update counter
-								$mapped_course['count'] += 1;
+								$mapped_course['count'] += (is_array($users) ? count($users) : 1);
 								$map[$index] = $mapped_course;
 							}
 						}
@@ -338,6 +342,9 @@ class Doppler_For_Learnpress_Admin {
 				$lists = get_option('dplr_learnpress_subscribers_list');
 				$list_id = $lists['buyers'];
 				$this->subscribe_user_or_users($users, $list_id, $user_email);
+				$lists['count'] += (is_array($users) ? count($users) : 1);
+
+				update_option('dplr_learnpress_courses_map', $lists);
 
 				$map = get_option('dplr_learnpress_courses_map');
 				if( !empty($map) ){
@@ -349,7 +356,7 @@ class Doppler_For_Learnpress_Admin {
 								$this->subscribe_user_or_users($users, $mapped_course['list_id'], $user_email);
 
 								//update counter
-								$mapped_course['count'] += 1;
+								$mapped_course['count'] += (is_array($users) ? count($users) : 1);
 								$map[$index] = $mapped_course;
 							}
 						}
