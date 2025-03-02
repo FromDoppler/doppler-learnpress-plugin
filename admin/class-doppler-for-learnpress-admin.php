@@ -239,7 +239,6 @@ class Doppler_For_Learnpress_Admin {
 	public function dplr_learnpress_synch() {
 
 		if(empty($_POST['list_id'])) wp_die();
-		
 		$list_id = intval($_POST['list_id']);		
 		$students = $this->get_students();
 		//If students if empty dont't synch, but continue to save list.
@@ -258,10 +257,14 @@ class Doppler_For_Learnpress_Admin {
 		$map = get_option('dplr_learnpress_courses_map');
 	
 		if( !empty($map) ){
+			$lists = $this->get_alpha_lists();
 			foreach($map as $mapped_course){
-					$course_id = $mapped_course['course_id'];
-					$students = $this->get_students_from_course ($course_id);
-					$result = $subscriber_resource->importSubscribers( $mapped_course['list_id'], $this->get_subscribers_for_import($students) )['body'];
+					if(isset($lists[$mapped_course['list_id']]))
+					{
+						$course_id = $mapped_course['course_id'];
+						$students = $this->get_students_from_course ($course_id);
+						$result = $subscriber_resource->importSubscribers( $mapped_course['list_id'], $this->get_subscribers_for_import($students) )['body'];
+					}
 			}
 		}
 
