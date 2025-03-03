@@ -263,7 +263,7 @@ class Doppler_For_Learnpress_Admin {
 					{
 						$course_id = $mapped_course['course_id'];
 						$students = $this->get_students_from_course ($course_id);
-						$result = $subscriber_resource->importSubscribers( $mapped_course['list_id'], $this->get_subscribers_for_import($students) )['body'];
+						$subscriber_resource->importSubscribers( $mapped_course['list_id'], $this->get_subscribers_for_import($students) )['body'];
 					}
 			}
 		}
