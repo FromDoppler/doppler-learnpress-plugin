@@ -1,7 +1,10 @@
 (function ($) {
 	"use strict";
 
-	$(function () {
+	$(window).on('load', function () {
+		$('#doppler-loading-screen').hide();
+		$('#dplr_body_content').show();
+
 		var syncListButton = $("#dplr-lp-lists-btn");
 		var buyersSelect = $("#dplr-lp-form-list select");
 		var synchBuyers = function (list_id) {
