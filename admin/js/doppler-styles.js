@@ -1,6 +1,6 @@
 window["style-guide-configuration"] = {
-	initFonts: true,
+  initFonts: true,
 };
 new AssetServices().load(
-	"https://cdn.fromdoppler.com/doppler-style-guide/asset-manifest-v1.json"
+  "https://cdn.fromdoppler.com/doppler-style-guide/asset-manifest-v1.json",
 );
